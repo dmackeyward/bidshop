@@ -1,0 +1,11 @@
+# dependencies
+node_modules/
+
+# Playwright output (regenerated on every run)
+test-results/
+playwright-report/
+blob-report/
+
+# local config / misc
+*.log
+.DS_Store
