@@ -34,11 +34,18 @@ this folder).
 
 ## Install & run (from a clean checkout)
 
+All commands are run from the repo root (`bidshop/`):
+
 ```bash
-cd tests
+# 1. App dependencies — required: Playwright boots both services itself, so
+#    they only need `npm install` here (do NOT start them manually).
+cd backend && npm install
+cd ../frontend && npm install
+
+# 2. Test project
+cd ../tests
 npm install                 # test dependencies
 npx playwright install chromium   # one-time browser download
-
 npm test                    # full run: boots API + frontend fresh, runs both suites
 npm run test:api            # API suite only
 npm run test:ui             # UI suite only
